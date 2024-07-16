@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Agregar Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+</head>
+
+<body>
+    <header class="header d-flex justify-content-between align-items-center">
+        <div class="logo">
+            <a href="https://campestreags.com">
+                <img src="logo.png" height="50px" margin-right="10px">
+            </a>
+        </div>
+            
+        </div>  
+        <nav class="ml-auto">
+            <!-- Botón Dashboards -->
+            <a href="/Estacion/Estacion/Index.html" class="mr-3">
+                Dashboards
+                <i class="bi bi-speedometer2"></i>
+            </a>
+            
+            </a>
+            <!-- Botón Niveles -->
+            <div class="dropdown mr-3">
+                
+                <a href="#" class="dropdown-toggle" id="levelsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Niveles
+                    <i class="bi bi-layers"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="levelsDropdown">
+                    <a class="dropdown-item" href="/Estacion/Estacion/Level/level.html">Nivel 1</a>
+                    <a class="dropdown-item" href="/Estacion/Estacion/Level/level2.html">Nivel 2</a>
+                    <a class="dropdown-item" href="/Estacion/Estacion/Level/level3.html">Nivel 3</a>
+                    <a class="dropdown-item" href="/Estacion/Estacion/Level/level4.html">Nivel 4</a>
+                </div>
+            </div>
+            <!-- Botón Sótanos -->
+            <div class="dropdown mr-3">
+                <a href="#" class="dropdown-toggle" id="basementsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sótanos
+                    <i class="bi bi-building"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="basementsDropdown">
+                    <a class="dropdown-item" href="/Estacion/Estacion/Level/level.html">Sótano 1</a>
+                    <a class="dropdown-item" href="/Estacion/Estacion/Basement/basement2.html">Sótano 2</a>
+                    <a class="dropdown-item" href="/Estacion/Estacion/Basement/basement3.html">Sótano 3</a>
+                    <a class="dropdown-item" href="/Estacion/Estacion/Basement/basement4.html">Sótano 4</a>
+                </div>
+            </div>
+            <!-- Botón Cámaras -->
+            <!-- Botón Cámaras -->
+            <div class="dropdown mr-3">
+                <a href="#" class="dropdown-toggle" id="camerasDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Cámaras
+                    <i class="bi bi-camera"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="camerasDropdown">
+                    <a class="dropdown-item" href="/Estacion/Estacion/camaras/niveles.html">Niveles</a>
+                    <a class="dropdown-item" href="/Estacion/Estacion/camaras/sotano.html">Sótanos</a>
+                </div>
+
+                <a href="/Estacion/Estacion/Statistics/statistics.html" class="mr-3">Estadísticas
+                    <i class="bi bi-bar-chart-line"></i>
+                </a>
+
+            </div>
+            <div class="user-icon">
+                <a href="/Estacion/Estacion/Profile/profile.html">
+                    <lord-icon
+                    src="https://cdn.lordicon.com/bgebyztw.json"
+                    trigger="hover"
+                    colors="primary:#109173,secondary:#08a88a"
+                    style="width:35px;height:35px">
+                    </lord-icon>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <lord-icon
+                src="https://cdn.lordicon.com/dxjqoygy.json"
+                trigger="hover"
+                colors="primary:#109173,secondary:#08a88a"
+                style="width:100px;height:100px;cursor:pointer"
+                data-toggle="modal" data-target="#profilePhotoModal">
+                </lord-icon>
+                <h2>Antonio Pérez</h2>
+                <a href="#">Ver el perfil</a>
+                <div class="list-group mt-3">
+                    <a href="#" class="list-group-item list-group-item-action active">Cuenta <i class="fas fa-user"></i></a>
+                    <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#privacyModal">Privacidad <i class="fas fa-shield-alt"></i></a>
+                    <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#changeAccountModal">Cambiar cuenta <i class="fas fa-exchange-alt"></i></a>
+                    <a href="#" class="list-group-item list-group-item-action btn-red" data-toggle="modal" data-target="#logoutModal">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h3 class="card-title">Información Personal <i class="fas fa-info-circle"></i></h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Nombre:</strong> Antonio <i class="fas fa-id-card"></i></li>
+                            <li class="list-group-item"><strong>Apellidos:</strong> Pérez <i class="fas fa-id-card-alt"></i></li>
+                            <li class="list-group-item"><strong>Email:</strong> usuario@example.com <i class="fas fa-at"></i></li>
+                            <li class="list-group-item"><strong>Teléfono:</strong> +1 234 567 890 <i class="fas fa-phone"></i></li>
+                            <li class="list-group-item"><strong>Fecha de Nacimiento:</strong> 1 de Enero, 1980 <i class="fas fa-birthday-cake"></i></li>
+                            <li class="list-group-item"><strong>Miembro Desde:</strong> Marzo, 2020 <i class="fas fa-calendar-alt"></i></li>
+                        </ul>
+                        <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#updateProfileModal">Actualizar Perfil <i class="fas fa-edit"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Modales -->
+    <!-- Modal Seleccionar Foto de Perfil -->
+    <div class="modal fade" id="profilePhotoModal" tabindex="-1" aria-labelledby="profilePhotoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="profilePhotoModalLabel">Seleccionar Foto de Perfil</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="file" class="form-control-file" id="profilePhotoInput">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar <i class="fas fa-times"></i></button>
+                    <button type="button" class="btn btn-primary">Subir Foto <i class="fas fa-upload"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Actualizar Perfil -->
+    <div class="modal fade" id="updateProfileModal" tabindex="-1" aria-labelledby="updateProfileModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateProfileModalLabel">Actualizar Perfil</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Nombre de usuario</label>
+                            <input type="text" class="form-control" id="username" value="antonio">
+                        </div>
+                        <div class="form-group">
+                            <label for="firstname">Nombre</label>
+                            <input type="text" class="form-control" id="firstname" value="Antonio">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Apellidos</label>
+                            <input type="text" class="form-control" id="lastname" value="Pérez">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Dirección de correo electrónico</label>
+                            <input type="email" class="form-control" id="email" value="antonioperez@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="text" class="form-control" id="phone" value="+1 234 567 890">
+                        </div>
+                        <div class="form-group">
+                            <label for="birthdate">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control" id="birthdate" value="1980-01-01">
+                        </div>
+                        <div class="form-group">
+                            <label for="membershipDate">Miembro Desde</label>
+                            <input type="text" class="form-control" id="membershipDate" value="Marzo, 2020" readonly>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar <i class="fas fa-times"></i></button>
+                    <button type="button" class="btn btn-primary">Guardar Cambios <i class="fas fa-save"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cambiar Cuenta -->
+    <div class="modal fade" id="changeAccountModal" tabindex="-1" aria-labelledby="changeAccountModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="changeAccountModalLabel">Cambiar Cuenta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Estás seguro de que deseas cambiar de cuenta?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar <i class="fas fa-times"></i></button>
+                    <button type="button" class="btn btn-primary">Cambiar <i class="fas fa-exchange-alt"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Privacidad -->
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="privacyModalLabel">Privacidad</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Aquí puedes ajustar tus configuraciones de privacidad.</p>
+                    <form>
+                        <div class="form-group">
+                            <label for="password">Nueva Contraseña</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirmar Nueva Contraseña</label>
+                            <input type="password" class="form-control" id="confirmPassword">
+                        </div>
+                        <button type="button" class="btn btn-danger mt-3" id="deleteAccountButton">Borrar Cuenta <i class="fas fa-trash-alt"></i></button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar <i class="fas fa-times"></i></button>
+                    <button type="button" class="btn btn-primary">Guardar <i class="fas fa-save"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('deleteAccountButton').addEventListener('click', function() {
+            if (confirm('¿Estás seguro de que deseas borrar la cuenta?')) {
+                // Aquí puedes agregar la lógica para borrar la cuenta.
+                alert('Cuenta borrada');
+            } else {
+                // Lógica para cancelar la eliminación de la cuenta.
+                alert('Eliminación de cuenta cancelada');
+            }
+        });
+    </script>
+
+    <!-- Modal Cerrar Sesión -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">Cerrar Sesión</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Estás seguro de que deseas cerrar sesión?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar <i class="fas fa-times"></i></button>
+                    <button type="button" class="btn btn-danger">Cerrar Sesión <i class="fas fa-sign-out-alt"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts necesarios para Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
